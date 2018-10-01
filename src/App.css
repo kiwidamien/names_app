@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background-color: #DADADA;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 40px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.quartileTable {
+  display: flex;
+  justify-content: space-around;
+}
+
+.quartileTable table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 55%;
+}
+
+.quartileTable td, .quartileTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.quartileTable tr:nth-child(odd){background-color: #fff;}
+
+.quartileTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #E0F5D8;
+    color: black;
+}
+
+svg{
+  background-color: #fafafa;
+  border-radius: 5px;
+}
