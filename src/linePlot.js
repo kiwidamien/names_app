@@ -40,10 +40,6 @@ const linePlot = (props) => {
 
   const gender = {'F': 'women', 'M': 'men'};
 
-  const quartile = [[props.quartiles[0], 0.00], [props.quartiles[0], 0.06],
-                    [props.quartiles[0], 0.03], [props.quartiles[2], 0.03],
-                    [props.quartiles[2], 0.06], [props.quartiles[2], 0.00]];
-
   return (
     <div>
       <div className='title'>Age distribution for {gender[props.gender]} named {props.name} in 2017</div>
