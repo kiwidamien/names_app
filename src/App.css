@@ -27,6 +27,29 @@ body{
   font-size: large;
 }
 
+.footer{
+  background-color: #222;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  height: 60px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer input, select, button {
+  font-size: 1.0em;
+  padding:3px;
+}
+
+.footer select, button{
+  width: 16ex;
+  border-radius: 3px;
+}
+
 .quartileTable {
   display: flex;
   justify-content: space-around;
@@ -53,7 +76,7 @@ body{
     color: black;
 }
 
-svg{
+svg {
   background-color: #fafafa;
   border-radius: 5px;
 }

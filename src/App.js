@@ -57,14 +57,20 @@ class App extends Component {
         {quartileTable(this.state)}
 
         </div>
-        <div>
-          <p>Try a new name:</p>
-          <input type='text' value={this.state.new_name} onChange={(e)=>this.updateName(e)}/>
-          <select onChange={(e) => this.setState({new_gender: e.target.value})} value={this.state.new_gender}>
-            <option value='F'>Female</option>
-            <option value='M'>Male</option>
-          </select>
-          <button onClick = {() => this.update()}>Update</button>
+        <div className='footer'>
+          <div>Try a new name:</div>
+          <div>
+            <input type='text' value={this.state.new_name} onChange={(e)=>this.updateName(e)}/>
+          </div>
+          <div>
+            <select onChange={(e) => this.setState({new_gender: e.target.value})} value={this.state.new_gender}>
+              <option value='F'>Female</option>
+              <option value='M'>Male</option>
+            </select>
+          </div>
+          <div>
+            <button onClick = {() => this.update()}>Update</button>
+          </div>
         </div>
       </div>
     );
