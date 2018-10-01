@@ -39,11 +39,13 @@ class App extends Component {
           <h1 className="App-title">Welcome to Age Estimator. Working with {this.gender_dict[this.state.gender]} named {this.state.name}.</h1>
         </header>
 
-        <div>
+        <div style={{width:'85%', margin: '0 auto'}}>
         {linePlot(this.state)}
 
         <p>
-        The graph above shows the age distribution for people named {this.state.name} (under the assumption that survival rates are independent of name)
+        The graph above shows the age distribution for people named {this.state.name}. Information is derived from the
+        <a href="https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data">Social Security name database</a> for birth rates, and the <a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk">census age distribution</a>. 
+        The assumption is made that survival rates are independent of name.
         </p>
 
         <p>
