@@ -46,7 +46,7 @@ const linePlot = (props) => {
 
   return (
     <div>
-      <div className='title'>Age distribution for {gender[props.gender]} named {props.name}</div>
+      <div className='title'>Age distribution for {gender[props.gender]} named {props.name} in 2017</div>
 
       <svg width={svgWidth} height={svgHeight}>
         <Axes
