@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import linePlot from './linePlot';
 import quartileTable from './quartileTable';
@@ -18,7 +17,7 @@ class App extends Component {
     const new_name = this.state.new_name.toLowerCase();
     const desired_gender = this.state.new_gender || this.state.gender;
 
-    const possible_data = data.filter( (element) => (element.name.toLowerCase() == new_name) && (element.gender == desired_gender));
+    const possible_data = data.filter( (element) => (element.name.toLowerCase() === new_name) && (element.gender === desired_gender));
 
     if (possible_data.length === 0) {
       alert(`Not enough data to show for ${this.gender_dict[desired_gender]} with name ${new_name}`);
@@ -56,7 +55,7 @@ class App extends Component {
         </p>
 
         {quartileTable(this.state)}
-        
+
         </div>
         <div>
           <p>Try a new name:</p>

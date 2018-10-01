@@ -1,8 +1,5 @@
 import React from 'react';
-import { scaleOrdinal, scaleLinear } from 'd3-scale';
-import { axisBottom, axisLeft } from 'd3-axis';
-import { json } from 'd3-request';
-import { select } from 'd3-selection';
+import { scaleLinear } from 'd3-scale';
 import Axes from './Axes';
 import { line as d3Line, area as d3Area } from 'd3-shape';
 
@@ -46,8 +43,6 @@ const linePlot = (props) => {
   const quartile = [[props.quartiles[0], 0.00], [props.quartiles[0], 0.06],
                     [props.quartiles[0], 0.03], [props.quartiles[2], 0.03],
                     [props.quartiles[2], 0.06], [props.quartiles[2], 0.00]];
-
-  const quartilePath = drawLine(quartile, xScale, yScale);
 
   return (
     <div>
