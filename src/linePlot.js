@@ -37,9 +37,10 @@ const linePlot = (props) => {
   const height= svgHeight - margin.top - margin.bottom;
 
   const percentMax = d3Max(props.probs.map( pt => pt[1]));
+  const topScale = (percentMax > 0.06) ? percentMax : 0.06;
 
   const xScale = scaleLinear().domain([0,100]).range([margin.left, margin.left + width]);
-  const yScale = scaleLinear().domain([0,percentMax]).range([height + margin.top, margin.top]).nice();
+  const yScale = scaleLinear().domain([0,topScale]).range([height + margin.top, margin.top]).nice();
 
   const gender = {'F': 'women', 'M': 'men'};
 
