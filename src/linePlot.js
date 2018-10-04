@@ -2,6 +2,7 @@ import React from 'react';
 import { scaleLinear } from 'd3-scale';
 import Axes from './Axes';
 import { line as d3Line, area as d3Area } from 'd3-shape';
+import { max as d3Max } from 'd3-array';
 
 const drawPoints = (list_of_point_info, xScale, yScale) => {
   return list_of_point_info.map( pt => {
@@ -35,8 +36,10 @@ const linePlot = (props) => {
   const width = svgWidth - margin.left - margin.right;
   const height= svgHeight - margin.top - margin.bottom;
 
+  const percentMax = d3Max(props.probs.map( pt => pt[1]));
+
   const xScale = scaleLinear().domain([0,100]).range([margin.left, margin.left + width]);
-  const yScale = scaleLinear().domain([0,0.06]).range([height + margin.top, margin.top]);
+  const yScale = scaleLinear().domain([0,percentMax]).range([height + margin.top, margin.top]).nice();
 
   const gender = {'F': 'women', 'M': 'men'};
 

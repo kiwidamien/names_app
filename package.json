@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "d3-array": "^1.2.4",
     "d3-axis": "^1.0.12",
     "d3-request": "^1.0.6",
     "d3-scale": "^2.1.2",
