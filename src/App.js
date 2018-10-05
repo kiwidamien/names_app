@@ -7,8 +7,9 @@ import data from './processed.json';
 class App extends Component {
   constructor(props){
     super(props);
+    const initial_index = Math.floor(Math.random() * data.length);
     this.gender_dict = {'F': 'women', 'M': 'men'};
-    this.state = data[1797];
+    this.state = data[initial_index];
     this.state.new_gender = this.state.gender;
     this.state.new_name = this.state.name;
   }
@@ -44,7 +45,7 @@ class App extends Component {
 
         <p>
         The graph above shows the age distribution for people named {this.state.name}. Information is derived from the
-        <a href="https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data">Social Security name database</a> for birth rates, and the <a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk">census age distribution</a>. 
+         <a href="https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data">Social Security name database</a> for birth rates, and the <a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk">census age distribution</a>.
         The assumption is made that survival rates are independent of name.
         </p>
 
