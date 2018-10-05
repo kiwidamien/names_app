@@ -44,8 +44,7 @@ class App extends Component {
         {linePlot(this.state)}
 
         <p>
-        The graph above shows the age distribution for people named {this.state.name}. Information is derived from the
-         <a href="https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data">Social Security name database</a> for birth rates, and the <a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk">census age distribution</a>.
+        The graph above shows the age distribution for people named {this.state.name}. Information is derived from the <a href="https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data">Social Security name database</a> for birth rates, and the <a href="https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk">census age distribution</a>.
         The assumption is made that survival rates are independent of name.
         </p>
 
